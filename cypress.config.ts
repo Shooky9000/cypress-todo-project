@@ -2,9 +2,6 @@ import { defineConfig } from "cypress";
 
 export default defineConfig({
   reporter: 'cypress-mochawesome-reporter',
-  reporterOptions: {
-        configFile: "reporter-config.json"
-    },
   e2e: {
     baseUrl: "https://todo.qacart.com",
     video: true,
