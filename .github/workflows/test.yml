@@ -25,10 +25,10 @@ jobs:
           cp -r cypress/screenshots public/screenshots
 
       - name: Merge test reports
-        run: npm run combine:report
+        run: npm run report:merge
 
       - name: Generate HTML report
-        run: npm run generate:report
+        run: npm run report:generate
 
       - name: Deploy report page to Github Page
         uses: peaceiris/actions-gh-pages@v3
