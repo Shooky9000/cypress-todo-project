@@ -20,10 +20,20 @@ jobs:
         run: npx cypress run
         continue-on-error: true
 
-      - name: Copy test executions and screenshots
+      - name: Run Cypress tests
+      run: npm run test:chrome
+      continue-on-error: true
+
+      - name: Copy test execution videos
         run: |
           mkdir public
-          cp -r cypress/reports/html/index.html public/
+          cp -r cypress/videos public/videos
+
+      - name: Merge test results into one
+        run: npm run report:merge
+
+      - name: Generate HTML report
+        run: npm run report:generate
 
       - name: Deploy report page to Github Page
         uses: peaceiris/actions-gh-pages@v3
