@@ -14,12 +14,10 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
 import 'cypress-mochawesome-reporter/register';
 
-//import addContext from 'mochawesome/addContext'
-const addContext = require('mochawesome/addContext');
-
+import addContext from 'mochawesome/addContext';
 
 Cypress.on("test:after:run", (test, runnable) => {
     
