@@ -20,6 +20,11 @@ jobs:
         run: npx cypress run
         continue-on-error: true
 
+      - name: Copy test executions and screenshots
+        run: |
+          mkdir public
+          cp -r cypress/reports/html/index.html public/
+
       - name: Deploy report page to Github Page
         uses: peaceiris/actions-gh-pages@v3
         with:
