@@ -19,7 +19,7 @@ jobs:
         continue-on-error: true
 
       - name: Copy test executions and screenshots
-        run:
+        run: |
           mkdir public
           cp -r cypress/videos public/videos
           cp -r cypress/screenshots public/screenshots
