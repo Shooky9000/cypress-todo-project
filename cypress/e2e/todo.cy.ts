@@ -1,6 +1,4 @@
 import User from "../models/User";
-import UserAPI from "../api/UserApi";
-import TodoAPI from "../api/TodoApi";
 import TodoPage from "../pages/TodoPage";
 import NewTodoPage from "../pages/NewTodoPage";
 import RegisterPage from "../pages/RegisterPage";

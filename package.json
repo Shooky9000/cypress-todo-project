@@ -11,7 +11,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
     "cypress": "^13.13.1",
@@ -22,5 +21,6 @@
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0",
     "typescript": "^5.5.3"
-  }
+  },
+  "description": ""
 }

@@ -1,0 +1,87 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-19T13:10:39.261Z",
+    "end": "2024-07-19T13:10:41.556Z",
+    "duration": 2295,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1ded1a4d-fe52-49a1-806b-1293133a15cf",
+      "title": "",
+      "fullFile": "cypress\\e2e\\user.cy.ts",
+      "file": "cypress\\e2e\\user.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "should be able to register",
+          "fullTitle": "should be able to register",
+          "timedOut": null,
+          "duration": 2266,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "var user = new User_1.default();\nvar registerPage = new RegisterPage_1.default();\nregisterPage.load();\nregisterPage.register(user);\nvar todoPage = new TodoPage_1.default();\ntodoPage.getWelcomeMessage().should(\"be.visible\");",
+          "err": {},
+          "uuid": "8e669739-5fdd-40ba-8620-03488d66cefa",
+          "parentUUID": "1ded1a4d-fe52-49a1-806b-1293133a15cf",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "8e669739-5fdd-40ba-8620-03488d66cefa"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 2266,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
