@@ -17,7 +17,9 @@
 import './commands'
 import 'cypress-mochawesome-reporter/register';
 
-import addContext from 'mochawesome/addContext'
+//import addContext from 'mochawesome/addContext'
+const addContext = require('mochawesome/addContext');
+
 
 Cypress.on("test:after:run", (test, runnable) => {
     
