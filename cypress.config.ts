@@ -9,7 +9,6 @@ export default defineConfig({
     baseUrl: "https://todo.qacart.com",
     video: true,
     setupNodeEvents(on, config) {
-      require('cypress-mochawesome-reporter/plugin')(on);
       // implement node event listeners here
     },
     env: {
