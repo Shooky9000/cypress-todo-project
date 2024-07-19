@@ -16,6 +16,10 @@ jobs:
           node-version: 20
       - name: Install dependencies
         run: npm ci
+          $(npm bin)/cypress cache path
+          $(npm bin)/cypress cache list
+          $(npm bin)/cypress verify
+          
       - name: Run Cypress tests
         run: npm run test:chrome
         continue-on-error: true
