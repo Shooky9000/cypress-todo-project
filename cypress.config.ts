@@ -5,6 +5,7 @@ export default defineConfig({
     reporterOptions: {
         configFile: "reporter-config.json"
     },
+    videoCompression: 15,
   e2e: {
     baseUrl: "https://todo.qacart.com",
     video: true,
