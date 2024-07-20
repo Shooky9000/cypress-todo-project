@@ -21,9 +21,9 @@ import addContext from 'mochawesome/addContext';
 
 Cypress.on("test:after:run", function(test, runnable) {
     
-    var videoName = Cypress.spec.name;
+    let videoName = Cypress.spec.name;
     videoName = videoName.replace('/.cy.ts.*', '.js');
-    var videoUrl = 'videos/' + videoName + '.mp4';
+    const videoUrl = 'videos/' + videoName + '.mp4';
 
     addContext({ test: test }, videoUrl);
 });
