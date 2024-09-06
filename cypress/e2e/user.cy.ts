@@ -1,16 +1,31 @@
 import User from "../models/User";
 import RegisterPage from "../pages/RegisterPage";
 import TodoPage from "../pages/TodoPage";
+import LoginPage from "pages/LoginPage";
 
+describe("Register and Login test cases", ()=>{
 
-it("should be able to register", () => {
+    let user: User;
+    let todoPage: TodoPage;
 
-    const user = new User();
-    const registerPage = new RegisterPage();
+    before(()=> {
+        user = new User();
+        todoPage = new TodoPage()
+    });
 
-    registerPage.load();
-    registerPage.register(user);
+    it("should be able to register", () => {   
+        const registerPage = new RegisterPage();
 
-    const todoPage = new TodoPage()
-    todoPage.getWelcomeMessage().should("be.visible");
+        registerPage.load();
+        registerPage.register(user);
+        todoPage.getWelcomeMessage().should("be.visible");
+    });
+
+    it("should be able to log in", () => {
+        const loginPage = new LoginPage();
+
+        loginPage.load();
+        loginPage.login(user);
+        todoPage.getWelcomeMessage().should("be.visible");
+    });
 });
